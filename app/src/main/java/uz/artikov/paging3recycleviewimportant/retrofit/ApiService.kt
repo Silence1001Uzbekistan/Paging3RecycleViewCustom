@@ -7,7 +7,10 @@ import uz.artikov.paging3recycleviewimportant.models.UserData
 
 interface ApiService {
 
+/*    @GET("users")
+    fun getUsers(@Query("page") page: Int): Call<UserData>*/
+
     @GET("users")
-    fun getUsers(@Query("page") page: Int): Call<UserData>
+    suspend fun getUsers2(@Query("page") page: Int): UserData
 
 }
